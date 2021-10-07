@@ -6,7 +6,7 @@ namespace UnitTests
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void TestAppend()
         {
             // Arrange
             Vector<double> leftVector = Vector<double>.Build.Dense(5, 1.0);
