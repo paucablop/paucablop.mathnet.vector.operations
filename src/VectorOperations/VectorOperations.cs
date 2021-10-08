@@ -13,6 +13,8 @@ namespace VectorOperations
         /// </summary>
         /// <param name="left"> This vector is appended on the left side</param>
         /// <param name="right"> This vector is appended on the right side</param>
+        /// <returns name="appendedVectors"> Vector with the right vector appended to the left vector</returns>
+
         public static Vector<T> Append<T>(Vector<T> left, Vector<T> right) where T : struct, IEquatable<T>, IFormattable
         {
             if (left == null)
