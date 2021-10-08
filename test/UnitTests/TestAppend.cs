@@ -1,11 +1,10 @@
 using System;
-using FluentAssertions;
 using MathNet.Numerics.LinearAlgebra;
 using Xunit;
 
 namespace UnitTests
 {
-    public class UnitTest1
+    public class TestAppend
     {
         [Fact]
         public void TestAppendShouldAppend()
@@ -23,18 +22,18 @@ namespace UnitTests
             Assert.Equal(1.0, vector[0]);
             Assert.Equal(2.0, vector[5]);
         }
+
         [Fact]
-        public void TestAppendThrowException()
+        public void TestAppendThrowExceptions()
         {
             // Arrange
-            Vector<double> leftVector = null;
+            Vector<double> leftVector = Vector<double>.Build.Dense(5, 1.0);
             Vector<double> righVector = Vector<double>.Build.Dense(4, 2.0);
 
-            // Act
-            var vector = VectorOperations.VectorOperations.Append(leftVector, righVector);
+            // Act and Assert
+            Assert.Throws<ArgumentNullException>(() => VectorOperations.VectorOperations.Append(null, righVector));
+            Assert.Throws<ArgumentNullException>(() => VectorOperations.VectorOperations.Append(leftVector, null));
 
-            // Assert
-            vector.Should().Thr
         }
     }
 }
