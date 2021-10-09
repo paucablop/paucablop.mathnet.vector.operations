@@ -9,7 +9,7 @@ namespace VectorOperations
     public static class VectorOperations
     {
         /// <summary>
-        /// Concatenates a vector (right) on the right side of a given vector (left)
+        /// Concatenates a left and a right vector along the same axis.
         /// </summary>
         /// <param name="left"> This vector is appended on the left side</param>
         /// <param name="right"> This vector is appended on the right side</param>
